@@ -1,5 +1,7 @@
 package com.WEBApp.springMVC5demo.Entity;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,7 +10,7 @@ import javax.persistence.*;
 public class EnglishDictionary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     @Column
     private String key;
     @Column

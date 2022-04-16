@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"></title>
+    <link rel="stylesheet"  href="/static/css/homeStyle.css">
+    <script src="/static/js/homeScript.js"></script>
+</head>
+<body>
+<div class="box"></div>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>Меню</li>
+            <li><a href="library.html">Библиотека</a></li>
+            <li><a href="editorialOffice.html">Редакция</a></li>
+        </ul>
+
+    </div>
+
+<!--<p>Get your greeting <a href="/greeting">here</a></p>-->
+</body>
+</html>

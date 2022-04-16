@@ -5,8 +5,8 @@
 }
 body{
     background: url("https://www.pnp.ru/upload/entities/2021/11/01/14/article/detailPicture/84/c7/ff/12/f6f484273f5ba04f5e5fba48e2121f64.jpg");
-    height: 100vh;
     display: flex;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@ body{
 #mainDictMenu{
     background: rgba(0, 0, 0, 0.1);
     margin-left: 5%;
-    position: fixed;
+    position: absolute;
     padding: 35px 60px 50px;
 }
 .menuDict {
@@ -35,8 +35,8 @@ body{
 }
 .search{
     display: flex;
-    margin-left: 80%;
-    margin-top: 5%;
+    margin-left: 60%;
+    margin-top: 2.5%;
     background: rgba(0, 0, 0, 0.5);
     height: 40px;
     border-radius: 40px;
@@ -58,7 +58,8 @@ body{
     font-size: 30px;
 }
 .search:hover > .searchText{
-    width: 240px;
+    width: 400px;
+    height: 40px;
     font-size: 16px;
     border-radius: 40px;
     background: rgba(0, 0, 0, 0.4);
@@ -81,4 +82,30 @@ body{
 }
 .search:hover > .searchBtn:hover{
     background: rgba(0, 0, 0, 0.8);
+}
+#EnglishDictionary{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 15%;
+    margin-left: 5%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS"
+}
+
+
+#GermanDictionary{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 15%;
+    margin-left: 58%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
 }

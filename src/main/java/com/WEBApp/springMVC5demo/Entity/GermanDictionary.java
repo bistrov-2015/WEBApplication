@@ -3,11 +3,11 @@ package com.WEBApp.springMVC5demo.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "GermanDictionary")
+@Table(name = "GermanLanguageDictionary")
 public class GermanDictionary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     @Column
     private String key;
     @Column

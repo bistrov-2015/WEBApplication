@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="library.css">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="../static/css/library.css">
     <script src="https://kit.fontawesome.com/68c777525e.js" crossorigin="anonymous"></script>
-    <script src="libraryScript.js"></script>
+    <script src="../static/js/libraryScript.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 </head>
 <body>
@@ -27,6 +27,13 @@
         <i class="fa-solid fa-magnifying-glass"></i>
 <!--      <i class="fas fa-search"></i>  -->
     </a>
+</div>
+<div id="EnglishDictionary" th:each="enLines : ${allEnglishLines}">
+    <p th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
+</div>
+
+<div id="GermanDictionary" th:each="grmLines : ${allGermanLines}">
+    <p th:text="${grmLines.key} + ' -- ' + ${grmLines.value}"/>
 </div>
 </body>
 </html>
