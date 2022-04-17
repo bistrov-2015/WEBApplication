@@ -29,12 +29,12 @@
 <!--      <i class="fas fa-search"></i>  -->
     </a>
 </div>
-<div id="EnglishDictionary" th:each="enLines : ${allEnglishLines}">
-    <p  th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
+<div id="EnglishDictionary" >
+    <p  th:each="enLines : ${allEnglishLines}" th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
 </div>
 
-<div id="GermanDictionary" th:each="grmLines : ${allGermanLines}">
-    <p th:text="${grmLines.key} + ' -- ' + ${grmLines.value}"/>
+<div id="GermanDictionary" >
+    <p th:each="grmLines : ${allGermanLines}" th:text="${grmLines.key} + ' -- ' + ${grmLines.value}"/>
 </div>
 </body>
 </html>

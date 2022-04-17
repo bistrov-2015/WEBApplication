@@ -25,6 +25,6 @@ public class GermanDictionaryController {
     public String addToDataBase(@RequestParam String key, @RequestParam String value, Model model){
         GermanDictionary germanDictionary = new GermanDictionary(key, value);
         germanDictionaryRepository.save(germanDictionary);
-        return "englishDictionary";
+        return "germanDictionary";
     }
 }

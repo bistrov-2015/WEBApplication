@@ -94,7 +94,9 @@ body{
     color: white;
     font-size: 1.6em;
     font-family: "Comic Sans MS";
-
+}
+#EnglishDictionary p {
+    position: sticky;
 }
 #enDictLine{
     position: sticky;
@@ -120,6 +122,9 @@ body{
     color: white;
     font-size: 1.6em;
     font-family: "Comic Sans MS";
+}
+#GermanDictionary p{
+    position: sticky;
 }
 #homePageReturn {
     margin-top: 5px;
