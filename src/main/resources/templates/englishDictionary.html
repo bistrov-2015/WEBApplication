@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="../static/css/englishStyle.css">
+</head>
+<body>
+<div id="homePageReturn"><li><a href="home.html">Главная</a></li></div>
+<div id="libraryPage"><li><a href="library.html">Библиотека</a></li></div>
+<div id="EnglishDictionary" th:each="enLines : ${allEnglishLines}">
+    <p th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
+</div>
+</body>
+</html>

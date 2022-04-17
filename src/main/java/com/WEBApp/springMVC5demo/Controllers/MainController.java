@@ -22,6 +22,11 @@ public class MainController {
         model.addAttribute("title", "Dictionary's");
         return "home";
     }
+    @GetMapping("/home.html")
+    public String returnToHomePage(Model model) {
+        model.addAttribute("title", "Dictionary's");
+        return "home";
+    }
     @GetMapping("/editorialOffice.html")
     public String editorialOfficePage(Model model) {
        model.addAttribute("title", "editorialOffice");

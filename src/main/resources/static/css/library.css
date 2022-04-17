@@ -95,8 +95,6 @@ body{
     font-size: 1.6em;
     font-family: "Comic Sans MS"
 }
-
-
 #GermanDictionary{
     position: absolute;
     width: 600px;
@@ -108,4 +106,18 @@ body{
     color: white;
     font-size: 1.6em;
     font-family: "Comic Sans MS";
+}
+#homePageReturn {
+    margin-top: 5px;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    left: 1px;
+    text-align: center;
+    border-radius: 12px;
+}
+#homePageReturn a {
+    color: white;
+    text-decoration: none;
 }

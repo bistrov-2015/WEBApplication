@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: url("https://www.pnp.ru/upload/entities/2021/11/01/14/article/detailPicture/84/c7/ff/12/f6f484273f5ba04f5e5fba48e2121f64.jpg");
+    display: flex;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#EnglishDictionary{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 7%;
+    margin-left: 5%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS"
+}
+#libraryPage {
+    margin-top: 1%;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    left: 40px;
+    text-align: center;
+    border-radius: 12px;
+}
+#libraryPage a {
+    color: white;
+    text-decoration: none;
+}
+#homePageReturn {
+    margin-top: 1%;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    left: 180px;
+    text-align: center;
+    border-radius: 12px;
+}
+#homePageReturn a {
+    color: white;
+    text-decoration: none;
+}
