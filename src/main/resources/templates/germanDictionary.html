@@ -11,5 +11,13 @@
 <div id="GermanDictionary" th:each="grmLines : ${allGermanLines}">
     <p th:text="${grmLines.key} + ' -- ' + ${grmLines.value}"/>
 </div>
+<div id="addForm">
+    <h1>Добавить запись</h1>
+    <form action="germanDictionary.html" method="post">
+        <input type="text" name="key" placeholder="Введите слово">
+        <input type="text" name="value" placeholder="Введите значение">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
 </body>
 </html>

@@ -28,4 +28,12 @@ public class GermanDictionary {
     public void setValue(String value) {
         this.value = value;
     }
+
+    public GermanDictionary() {
+    }
+
+    public GermanDictionary(String key, String value) {
+        this.key = key;
+        this.value = value;
+    }
 }

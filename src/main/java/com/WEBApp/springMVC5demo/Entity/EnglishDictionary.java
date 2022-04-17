@@ -31,4 +31,12 @@ public class EnglishDictionary {
     public void setValue(String value) {
         this.value = value;
     }
+
+    public EnglishDictionary() {
+    }
+
+    public EnglishDictionary(String key, String value) {
+        this.key = key;
+        this.value = value;
+    }
 }

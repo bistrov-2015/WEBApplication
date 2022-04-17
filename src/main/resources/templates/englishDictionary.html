@@ -11,5 +11,13 @@
 <div id="EnglishDictionary" th:each="enLines : ${allEnglishLines}">
     <p th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
 </div>
+<div id="addForm">
+    <h1>Добавить запись</h1>
+    <form action="englishDictionary.html" method="post">
+        <input type="text" name="key" placeholder="Введите слово">
+        <input type="text" name="value" placeholder="Введите значение">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
 </body>
 </html>
