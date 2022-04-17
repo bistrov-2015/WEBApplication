@@ -4,19 +4,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title th:text="${title}"></title>
     <link rel="stylesheet" href="../static/css/englishStyle.css">
+    <script src="../static/js/englishDictScript.js"></script>
 </head>
 <body>
 <div id="homePageReturn"><li><a href="home.html">Главная</a></li></div>
 <div id="libraryPage"><li><a href="library.html">Библиотека</a></li></div>
-<div id="EnglishDictionary" th:each="enLines : ${allEnglishLines}">
-    <p th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
+<div id="EnglishDictionary">
+    <p th:each="enLines : ${allEnglishLines}" th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
 </div>
-<div id="addForm">
+<div id="addFormEngl">
     <h1>Добавить запись</h1>
     <form action="englishDictionary.html" method="post">
         <input type="text" name="key" placeholder="Введите слово">
         <input type="text" name="value" placeholder="Введите значение">
-        <button type="submit">Добавить</button>
+        <button id="addToEnglishButton" type="submit">Добавить</button>
     </form>
 </div>
 </body>

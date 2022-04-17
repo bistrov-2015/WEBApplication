@@ -30,7 +30,7 @@
     </a>
 </div>
 <div id="EnglishDictionary" th:each="enLines : ${allEnglishLines}">
-    <p th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
+    <p  th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>
 </div>
 
 <div id="GermanDictionary" th:each="grmLines : ${allGermanLines}">

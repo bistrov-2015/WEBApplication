@@ -8,15 +8,15 @@
 <body>
 <div id="homePageReturn"><li><a href="home.html">Главная</a></li></div>
 <div id="libraryPage"><li><a href="library.html">Библиотека</a></li></div>
-<div id="GermanDictionary" th:each="grmLines : ${allGermanLines}">
-    <p th:text="${grmLines.key} + ' -- ' + ${grmLines.value}"/>
+<div id="GermanDictionary">
+    <p th:each="grmLines : ${allGermanLines}" th:text="${grmLines.key} + ' -- ' + ${grmLines.value}"/>
 </div>
-<div id="addForm">
+<div id="addFormGerm">
     <h1>Добавить запись</h1>
     <form action="germanDictionary.html" method="post">
         <input type="text" name="key" placeholder="Введите слово">
         <input type="text" name="value" placeholder="Введите значение">
-        <button type="submit">Добавить</button>
+        <button id="addToGermanButton" type="submit">Добавить</button>
     </form>
 </div>
 </body>

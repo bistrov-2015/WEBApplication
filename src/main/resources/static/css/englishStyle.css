@@ -51,7 +51,7 @@ body{
     color: white;
     text-decoration: none;
 }
-#addForm{
+#addFormEngl{
     position: absolute;
     width: 600px;
     height: 100px;
@@ -62,6 +62,13 @@ body{
     font-size: 1.6em;
     font-family: "Comic Sans MS"
 }
-#addForm h1{
+#addFormEngl h1{
     font-size: 1.3em;
+}
+#addToEnglishButton{
+    cursor: pointer;
+}
+#EnglishDictionary p{
+    position: sticky;
+    top: 0px;
 }
