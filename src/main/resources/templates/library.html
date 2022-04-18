@@ -21,13 +21,19 @@
             </li>
         </ul>
 </div>
-<!--<p th:text="'Hello, ' + ${name} + '!'" />-->
-<div class="search">
-    <input type="text" class="searchText" placeholder="Искать во всех словарях...">
-    <a class="searchBtn">
-        <i class="fa-solid fa-magnifying-glass"></i>
-<!--      <i class="fas fa-search"></i>  -->
-    </a>
+<!--<div class="search">-->
+<!--    <input type="text" class="searchText" placeholder="Искать во всех словарях...">-->
+<!--    <a class="searchBtn">-->
+<!--        <i class="fa-solid fa-magnifying-glass"></i>-->
+<!--&lt;!&ndash;      <i class="fas fa-search"></i>  &ndash;&gt;-->
+<!--    </a>-->
+<!--</div>-->
+<div id="findInLibrary">
+    <h1>Поиск</h1>
+    <form action="/librarySearchResult.html" method="post">
+        <input type="text" name="keyword" placeholder="Искать во всех словарях">
+        <button id="findInLibraryButton" >Найти</button>
+    </form>
 </div>
 <div id="EnglishDictionary" >
     <p  th:each="enLines : ${allEnglishLines}" th:text="${enLines.key} + ' -- ' + ${enLines.value}"/>

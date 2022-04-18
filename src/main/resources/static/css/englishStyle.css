@@ -23,6 +23,9 @@ body{
     font-size: 1.6em;
     font-family: "Comic Sans MS"
 }
+#EnglishDictionary p{
+    position: sticky;
+}
 #libraryPage {
     margin-top: 1%;
     position: absolute;
@@ -68,7 +71,40 @@ body{
 #addToEnglishButton{
     cursor: pointer;
 }
-#EnglishDictionary p{
-    position: sticky;
-
+#findEnglishWord{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 15%;
+    margin-left: 55%;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS"
+}
+#findEnglishWord h1{
+    font-size: 1.3em;
+}
+#findEnglBykeyButton{
+    cursor: pointer;
+}
+#searchEnglResult{
+    position: absolute;
+    width: 600px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 25%;
+    margin-left: 55%;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS"
+}
+#searchEnglResult h2 {
+    font-size: 1em;
+}
+#searchEnglResult p{
+    font-size: 1.6em;
+    color: white;
+    text-align: right;
+    height: 50px;
 }
