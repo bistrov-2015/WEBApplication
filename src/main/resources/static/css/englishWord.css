@@ -11,17 +11,25 @@ body{
     background-size: cover;
     background-position: center;
 }
-#GermanDictionary{
+#searchEnglResult{
     position: absolute;
     width: 600px;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.7);
-    margin-top: 7%;
-    margin-left: 5%;
-    overflow: auto;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 20%;
+    margin-left: 30%;
     color: white;
     font-size: 1.6em;
     font-family: "Comic Sans MS"
+}
+#searchEnglResult h2 {
+    font-size: 1em;
+}
+#searchEnglResult p{
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+    height: 50px;
 }
 #libraryPage {
     margin-top: 1%;
@@ -51,40 +59,17 @@ body{
     color: white;
     text-decoration: none;
 }
-#addFormGerm{
+#EnglishDictionaryPage{
+    margin-top: 1%;
     position: absolute;
-    width: 600px;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.7);
-    margin-top: 7%;
-    margin-left: 55%;
+    width: 60px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    left: 300px;
+    text-align: center;
+    border-radius: 12px;
+}
+#EnglishDictionaryPage a{
     color: white;
-    font-size: 1.6em;
-    font-family: "Comic Sans MS"
-}
-#addFormGerm h1{
-    font-size: 1.3em;
-}
-#addToGermanButton{
-    cursor: pointer;
-}
-#GermanDictionary p{
-    position: sticky;
-}
-#findGermanWord{
-    position: absolute;
-    width: 600px;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.7);
-    margin-top: 15%;
-    margin-left: 55%;
-    color: white;
-    font-size: 1.6em;
-    font-family: "Comic Sans MS"
-}
-#findGermanWord h1{
-    font-size: 1.3em;
-}
-#findGermanBykeyButton{
-    cursor: pointer;
+    text-decoration: none;
 }

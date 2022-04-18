@@ -140,3 +140,28 @@ body{
     color: white;
     text-decoration: none;
 }
+#findInLibrary{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 5%;
+    margin-left: 55%;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS"
+}
+#findInLibrary h1 {
+    font-size: 1.3em;
+    text-decoration: none;
+}
+#findInLibrary input{
+    width: 300px;
+    height: 30px;
+    font-size: 0.8em;
+}
+#findInLibraryButton{
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+}

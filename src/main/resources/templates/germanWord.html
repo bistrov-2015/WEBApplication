@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="../static/css/germanWord.css">
+    <!--    <script src="../static/js/englishDictScript.js"></script>-->
+</head>
+<body>
+<div id="homePageReturn"><li><a href="home.html">Главная</a></li></div>
+<div id="libraryPage"><li><a href="library.html">Библиотека</a></li></div>
+<div id="GermanDictionaryPage"><li><a href="germanDictionary.html">Назад</a></li></div>
+<div id="searchGermanResult" th:each="word:${GermanSearchResult}">
+    <h2>Результат</h2>
+    <!--    <p th:utext="word : ${EnglishSearchResult}" th:text="${word.key} + ' &#45;&#45; ' + ${word.value}"/>-->
+    <p th:text="${word.key} + ' -- ' + ${word.value}"/>
+</div>
+</body>
+</html>

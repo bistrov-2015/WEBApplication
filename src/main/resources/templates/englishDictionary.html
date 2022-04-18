@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title th:text="${title}"></title>
     <link rel="stylesheet" href="../static/css/englishStyle.css">
-    <script src="../static/js/englishDictScript.js"></script>
+<!--    <script src="../static/js/englishDictScript.js"></script>-->
 </head>
 <body>
 <div id="homePageReturn"><li><a href="home.html">Главная</a></li></div>
@@ -20,5 +20,21 @@
         <button id="addToEnglishButton" type="submit">Добавить</button>
     </form>
 </div>
+<div id="findEnglishWord">
+    <h1>Поиск</h1>
+    <form action="/englishWord.html" method="post">
+        <input type="text" name="keyword" placeholder="Введите слово">
+        <button id="findEnglBykeyButton" >Найти</button>
+    </form>
+</div>
+
+<!--<div id="addFormEngl">-->
+<!--    <h1>Добавить запись</h1>-->
+<!--    <form name="addToEnDictForm" >-->
+<!--        <input  type="text" name="key" placeholder="Введите слово">-->
+<!--        <input  type="text" name="value" placeholder="Введите значение">-->
+<!--        <button id="addToEnglishButton" type="submit" onclick="addToEnDictionary()">Добавить</button>-->
+<!--    </form>-->
+<!--</div>-->
 </body>
 </html>

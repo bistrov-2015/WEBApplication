@@ -1,5 +1,6 @@
 package com.WEBApp.springMVC5demo.Controllers;
 
+import com.WEBApp.springMVC5demo.Entity.EnglishDictionary;
 import com.WEBApp.springMVC5demo.Entity.GermanDictionary;
 import com.WEBApp.springMVC5demo.repository.GermanDictionaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,12 @@ public class GermanDictionaryController {
         GermanDictionary germanDictionary = new GermanDictionary(key, value);
         germanDictionaryRepository.save(germanDictionary);
         return "germanDictionary";
+    }
+    @PostMapping("/germanWord.html")
+    public String findEnglishValue(@RequestParam String keyword, Model model) {
+        Iterable<GermanDictionary> searchValue = germanDictionaryRepository.findByKeyOrValue(keyword, keyword);
+        model.addAttribute("title", "word");
+        model.addAttribute("GermanSearchResult", searchValue);
+        return "germanWord";
     }
 }
