@@ -17,7 +17,7 @@ public class GermanDictionaryController {
     private GermanDictionaryRepository germanDictionaryRepository;
     @GetMapping("/germanDictionary.html")
     public String getGermanDictionaryPage(Model model){
-        Iterable<GermanDictionary> GermanDictionary = germanDictionaryRepository.findAll();
+        Iterable<GermanDictionary> GermanDictionary = germanDictionaryRepository.findAllAndOrderByKey();//findAll();
         model.addAttribute("allGermanLines", GermanDictionary);
         model.addAttribute("title", "GermanDictionary");
         return("germanDictionary");

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @Controller
 public class EnglishDictionaryController {
@@ -18,7 +17,7 @@ public class EnglishDictionaryController {
 //    private EnglishService englishService;
     @GetMapping("/englishDictionary.html")
     public String getEnglishDictionaryPage(Model model) {
-        Iterable<EnglishDictionary> EnglishDictionary = englishDictionaryRepository.findAll();
+        Iterable<EnglishDictionary> EnglishDictionary = englishDictionaryRepository.findAllAndOrderByKey();//findAll();
         model.addAttribute("allEnglishLines", EnglishDictionary);
         model.addAttribute("title", "EnglishDictionsry");
         return "englishDictionary";

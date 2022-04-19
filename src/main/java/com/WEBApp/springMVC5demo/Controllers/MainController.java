@@ -34,8 +34,8 @@ public class MainController {
     }
     @GetMapping("/library.html")
     public String getLibraryPage(Model model) {
-        Iterable<EnglishDictionary> EnglishDictionsry = englishDictionaryRepository.findAll();
-        Iterable<GermanDictionary> GermanDictionary = germanDictionaryRepository.findAll();
+        Iterable<EnglishDictionary> EnglishDictionsry = englishDictionaryRepository.findAllAndOrderByKey();//findAllAndGroupByKeyValueOrderByKey();//
+        Iterable<GermanDictionary> GermanDictionary = germanDictionaryRepository.findAllAndOrderByKey();//findAll();
         model.addAttribute("allEnglishLines", EnglishDictionsry);
         model.addAttribute("allGermanLines", GermanDictionary);
         model.addAttribute("title", "library");
