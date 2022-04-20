@@ -5,7 +5,8 @@ import org.springframework.data.repository.CrudRepository;
 
 
 public interface GermanDictionaryRepository extends CrudRepository<GermanDictionary, Long> {
-    Iterable<GermanDictionary>findByKeyOrValue(String key, String val);
+    Iterable<GermanDictionary>findByKeyOrValue(String key, String value);
     @Query("select g from GermanDictionary g group by g.id order by g.key")
     Iterable<GermanDictionary>findAllAndOrderByKey();
+//    Iterable<GermanDictionary>deleteByKeyOrValue();
 }
