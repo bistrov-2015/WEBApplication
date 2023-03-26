@@ -1,0 +1,49 @@
+version: '3.9'
+
+services:
+  db:
+    image: 'postgres:latest'
+    container_name: db
+    volumes:
+      - postgres:/data/pgdata
+    environment:
+      - POSTGRES_DB=Dictionary
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=pas
+     # - PGDATA=/data/pgdata
+    ports:
+      - "5442:5432"
+    networks:
+      - app_network
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg-isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+  springMVC5-demo:
+    image: 'springtest'
+    build:
+      context: ../../..
+    container_name: springtest
+   # depends_on:
+    #  - db
+    environment:
+      - HOST=db
+      - PORT = 5432
+      - DB=Dictionary
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=pas
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      #- POSTGRES_DB:Dictionary
+    ports:
+      - "8080:8080"
+    networks:
+      - app_network
+networks:
+  app_network:
+    name: app_network
+volumes:
+  postgres:
+    name: postgres

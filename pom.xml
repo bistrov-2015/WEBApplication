@@ -11,7 +11,7 @@
 	<groupId>com.WEBApp</groupId>
 	<artifactId>springMVC5-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>springMVC5-demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
