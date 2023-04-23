@@ -10,24 +10,34 @@ services:
       - POSTGRES_DB=Dictionary
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pas
-     # - PGDATA=/data/pgdata
+      # - PGDATA=/data/pgdata
     ports:
       - "5442:5432"
     networks:
       - app_network
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "pg-isready", "-U", "postgres"]
+      test: [ "CMD-SHELL", "pg-isready", "-U", "postgres" ]
       interval: 5s
       timeout: 5s
       retries: 3
+
+#  flyway:
+#    image: flyway/flyway
+#    command: -url=jdbc:postgresql://db:5432/ -schemas=public -user=postgres -password=pas -connectRetries=60 migrate
+#    volumes:
+#      - .:/flyway/sql
+#    depends_on:
+#      - db
+#    networks:
+#      - app_network
 
   springMVC5-demo:
     image: 'springtest'
     build:
       context: ../../..
     container_name: springtest
-   # depends_on:
+    # depends_on:
     #  - db
     environment:
       - HOST=db

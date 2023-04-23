@@ -1,3 +1,4 @@
+
 package com.WEBApp.springMVC5demo.Entity;
 
 import org.springframework.stereotype.Component;
@@ -40,3 +41,4 @@ public class EnglishDictionary {
         this.value = value;
     }
 }
+

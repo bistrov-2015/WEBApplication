@@ -5,8 +5,223 @@
 }
 body{
     background: url("https://www.pnp.ru/upload/entities/2021/11/01/14/article/detailPicture/84/c7/ff/12/f6f484273f5ba04f5e5fba48e2121f64.jpg");
+    display: flex;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+#language1{
+    background: rgba(0, 0, 0, 0.9);
+    margin-top: 21.45%;
+    margin-left: 5%;
+    position: absolute;
+    padding: 15px 28px 30px;
+}
+.languagesList1 {
+    display: block;
+    justify-content: space-around;
+    color: white;
+    font-size: 1.95em;
+}
+.languagesListItems1 a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.sub-menu1{
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+}
+#language2{
+    background: rgba(0, 0, 0, 0.9);
+    margin-left: 55%;
+    margin-top: 21.45%;
+    position: absolute;
+    padding: 15px 28px 30px;
+}
+.languagesList2 {
+    display: block;
+    justify-content: space-around;
+    color: white;
+    font-size: 1.95em;
+}
+.languagesListItems2 a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.sub-menu2{
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+}
+#mainSearchForm{
+    background: rgba(0, 0, 0, 0.9);
+    margin-left: 30%;
+    margin-top: 5%;
+    position: absolute;
+    padding: 25px 28px 25px;
+}
+#select1Form{
+    width: 120px;
+    height: 35px;
+    font-family: "Comic Sans MS";
+}
+#select2Form{
+    width: 120px;
+    height: 35px;
+    font-family: "Comic Sans MS";
+}
+#inputedWordInSearch{
+    width: 320px;
+    height: 45px;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+
+
+
+/*
+.search{
+    display: flex;
+    margin-left: 60%;
+    margin-top: 2.5%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.searchBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+    color: #ffffff;
+    cursor: pointer;
+}
+.searchBtn >i {
+    font-size: 30px;
+}
+.search:hover > .searchText{
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0 6px;
+}
+.searchText{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #ffffff;
+    font-size: 16px;
+    transition: 400ms;
+    line-height: 40px;
+    width: 0;
+    font-weight: bold;
+}
+.search:hover > .searchBtn {
+    background: rgba(0, 0, 0, 0.4);
+}
+.search:hover > .searchBtn:hover{
+    background: rgba(0, 0, 0, 0.8);
+}*/
+#TranslationDiv{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 15%;
+    margin-left: 34%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+#translation{
+    margin-top: 4%;
+    margin-left: 34%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+/*
+#EnglishDictionary p {
+    position: sticky;
+}
+#enDictLine{
+    position: sticky;
+    top: 2%;
+    width: 600px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    left: 5%;
+
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+    text-align: justify;
+}
+#GermanDictionary{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 15%;
+    margin-left: 58%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+#GermanDictionary p{
+    position: sticky;
+}*/
+#homePageReturn {
+    margin-top: 5px;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    left: 1px;
+    text-align: center;
+    border-radius: 12px;
+}
+#homePageReturn a {
+    color: white;
+    text-decoration: none;
+}
+#findInLibrary{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 15%;
+    margin-left:35%;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS"
+}
+#findInLibrary h1 {
+    font-size: 1.3em;
+    text-decoration: none;
+}
+#findInLibrary input{
+    width: 500px;
+    height: 30px;
+    font-size: 0.8em;
+}
+#findTranslationBtn{
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
 }

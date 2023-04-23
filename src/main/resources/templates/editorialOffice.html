@@ -2,11 +2,44 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--<script src="/static/jquery/jquery-3.6.4.min.js"></script>-->
     <link rel="stylesheet" href="../static/css/editorialOfficeStyle.css">
+    <script src="/static/js/editorialOffice.js"></script>
 </head>
 <body>
-<textarea>fdddf</textarea>
-</button>
+<div id="homePageReturn">
+    <li><a href="home.html">Главная</a></li>
+</div>
+
+<form id="mainSearchForm">
+
+    <select id="select1Form" name="select1">
+        <option id="option1InSelect1Form"
+                th:each="type : ${Languages}"
+                th:value="${type.getLanguageCode()}"
+                th:text="${type.getLanguageName()}">
+        </option>
+    </select>
+
+    <select id="select2Form">
+        <option id="option2InSelect1Form"
+                th:each="type : ${Languages}"
+                th:value="${type.getLanguageCode()}"
+                th:text="${type.getLanguageName()}">
+        </option>
+    </select>
+
+    <input id="inputedWordInSearch" type="text" placeholder="Перевести слово">
+
+    <button id="findTranslationBtn" type="submit">Перевести</button>
+
+</form>
+
+<div id="TranslationDiv">
+    <p id="translation"></p>
+</div>
+
 </body>
 </html>
