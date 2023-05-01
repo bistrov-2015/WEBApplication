@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: url("https://www.pnp.ru/upload/entities/2021/11/01/14/article/detailPicture/84/c7/ff/12/f6f484273f5ba04f5e5fba48e2121f64.jpg");
+    display: flex;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#mainSearchForm {
+    background: rgba(0, 0, 0, 0.9);
+    margin-left: 30%;
+    margin-top: 5%;
+    position: absolute;
+    padding: 25px 28px 25px;
+}
+
+#select1Form {
+    width: 120px;
+    height: 35px;
+    font-family: "Comic Sans MS";
+}
+
+#select2Form {
+    width: 120px;
+    height: 35px;
+    font-family: "Comic Sans MS";
+}
+
+#inputedWordInSearch {
+    width: 320px;
+    height: 45px;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+
+#TranslationDiv {
+    position: absolute;
+    width: 715px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 13%;
+    margin-left: 30%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+
+#translation {
+    margin-top: 4%;
+    margin-left: 34%;
+    overflow: auto;
+    color: white;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+
+
+#addNewWordForm {
+    background: rgba(0, 0, 0, 0.9);
+    margin-left: 3%;
+    margin-top: 25%;
+    position: absolute;
+    padding: 25px 28px 25px;
+}
+
+#select1AddNewWord {
+    width: 120px;
+    height: 35px;
+    font-family: "Comic Sans MS";
+}
+
+#select2AddNewWord {
+    width: 120px;
+    height: 35px;
+    font-family: "Comic Sans MS";
+}
+
+#inputedNewWordToAdded {
+    width: 250px;
+    height: 45px;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+
+#inputedTranslationForNewWord {
+    width: 250px;
+    height: 45px;
+    font-size: 1.6em;
+    font-family: "Comic Sans MS";
+}
+
+#addNewWordBtn {
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#homePageReturnBtn {
+    margin-top: 2%;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    left: 2%;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+}
+
+#homePageReturnBtn a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#toLanguagePageBtn {
+    margin-top: 5%;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    left: 2%;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+}
+
+#toLanguagePageBtn a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#findTranslationBtn {
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+}

@@ -5,11 +5,29 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Stream;
+
 @Component
 public interface LanguageRepository extends CrudRepository<Languages,Long> {
     /*List<Languages>findByLanguageCode(String languageCode);*/
     @Query("select l from Languages l group by l.languageId order by l.languageCode")
-    Iterable<Languages>findAllAndOderByLanguageCode();
-    @Query("select l.languageCode from Languages l where l.languageName =:languageValue")
-    String findLanguageCodeByLanguageValue(String languageValue);
+    Iterable<Languages> findAllAndOderByLanguageCode();
+    /*Stream<Languages> findAllAndOderByLanguageCode();*/
+    @Query("select l.languageCode from Languages l")
+    List<String> findAllLanguageCodes();
+
+    @Query("select l.languageName from Languages l")
+    List<String> findAllLanguageNames();
+
+    @Query("select l.languageCode from Languages l where l.languageName =:languageName")
+    String findLanguageCodeByLanguageName(String languageName);
+
+    @Query("select l.languageCode from Languages l where l.languageCode =:languageCode")
+    String checkLanguageCodeMatches(String languageCode);
+
+    @Query("select l.languageName from Languages l where l.languageName =:languageName")
+    String checkLanguageNameMatches(String languageName);
+
+
 }

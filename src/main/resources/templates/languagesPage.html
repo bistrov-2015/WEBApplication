@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--<script src="/static/jquery/jquery-3.6.4.min.js"></script>-->
+    <link rel="stylesheet" href="../static/css/languagePageStyle.css">
+    <script src="/static/js/languagePageScript.js"></script>
+</head>
+<body>
+
+<div id="homePageReturn">
+    <li><a href="home.html">Главная</a></li>
+</div>
+
+<div id="returnToSearchPage">
+    <li><a href="searchTranslationsPage.html">Переводчик</a></li>
+</div>
+
+
+<table id="mainLanguageTable">
+    <caption id = "mainLanguageTableCaption">Languages</caption>
+    <thead id = "mainLanguageTableThead">
+    <tr id="firstRowTitle"><th>CODE</th><th>TITLE</th><th></th></tr> <!--ряд с ячейками заголовков-->
+    <tr id="addNewLanguageRow">
+        <th><input id="inputedNewLanguageCode" type="text" placeholder="Код языка"></th>
+        <th><input id="inputedNewLanguageName" type="text" placeholder="Название языка"></th>
+        <th><button id="addNewLanguageInToDictionary" type="click">Добавить</button></th>
+    </tr> <!--ряд с ячейками заголовков-->
+    </thead>
+    <tbody id = "languagesTBody">
+
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -43,11 +43,12 @@ public class MainController {
 
     @GetMapping("/")
     public String getHomePage(Model model) {
-        createTempEntity();
+        /*int i=0;
+        if(i==0){createTempEntity(); i++;}*/
         Iterable<Languages> Languages = languagesService.findAllAndOderByLanguageCode();
         model.addAttribute("Languages",Languages);
         /*model.addAttribute("title", "editorialOffice");*/
-        return "editorialOffice";
+        return "home";
     }
    /* @PostMapping("/serchResult")
     public String returnSearchResult(@RequestParam String language1, String language2, String wordText){
@@ -69,6 +70,19 @@ public class MainController {
        model.addAttribute("allLanguagesCods",Languages);
        model.addAttribute("title", "editorialOffice");
         return "editorialOffice";
+    }
+    @GetMapping("/searchTranslationsPage.html")
+    public String searchTranslationsPage(Model model) {
+
+        model.addAttribute("title", "searchTranslationsPage");
+        Iterable<Languages> Languages = languagesService.findAllAndOderByLanguageCode();
+        model.addAttribute("Languages",Languages);
+        model.addAttribute("title", "searchTranslationsPage");
+        return "searchTranslationsPage";
+    }
+    @GetMapping("/languagesPage.html")
+    public String getLanguagesPage(){
+        return "languagesPage";
     }
 
     @GetMapping("/library.html")

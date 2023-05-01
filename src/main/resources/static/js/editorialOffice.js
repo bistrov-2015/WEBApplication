@@ -58,9 +58,11 @@ $(document).ready(function () {
 
     /*$('#findTranslationBtn').on('click', doAjax);*/
 
-    $('#mainSearchForm').submit(doAjax)//on('click', doAjax);
+    /*----------------------------------------------REQUEST TO FIND WORD-------------------------------------------------*/
+
+    $('#mainSearchForm').submit(doAjaxRequestToFindTranslation)//on('click', doAjax);
     //$('#mainSearchForm').submit(function (){alert('нажата кнопка отправки формы')})
-    function doAjax() {
+    function doAjaxRequestToFindTranslation() {
         var language1 = $("#select1Form").val();//form.innerText;
         var language2 = $('#select2Form').val();//innerText;
         var inputedWord = $('#inputedWordInSearch').val();
@@ -70,7 +72,7 @@ $(document).ready(function () {
             return false;
         } else {
             $.ajax({
-                url: 'http://localhost:8080/serchRequestFromMainForm/getSearchResulToMainForm',
+                url: 'http://localhost:8080/serchRequest/getSearchResulToMainForm',
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',
@@ -99,5 +101,162 @@ $(document).ready(function () {
         }
     }
 
+    /*----------------------------------------------REQUEST TO ADD NEW WORD-------------------------------------------------*/
 
+   /* $('#addNewWordForm').submit(doAjaxRequestToAddNewWord())
+
+    function doAjaxRequestToAddNewWord() {
+        var wordLanguageCode = $('#select1AddNewWord').val();
+        var wordTranslationLanguageCode = $('#select2AddNewWord').val();
+        var newWord = $("#inputedNewWordToAdded").val();
+        var wordTranslation = $('#inputedTranslationForNewWord').val();
+
+        if (newWord.length === 0) {
+            alert("Введите слово для добавления!")
+            return false;
+        } else {
+            if (wordTranslation.length === 0) {
+                alert("Введите перевод!")
+                return false;
+            } else {
+
+                $.ajax({
+                    url: 'http://localhost:8080/addToDictionary/addNewWord',
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        wordLanguageCode: wordLanguageCode,
+                        wordTranslationLanguageCode: wordTranslationLanguageCode,
+                        newWord: newWord,
+                        wordTranslation: wordTranslation
+                    }),
+                    success: function (data) {
+
+                        if (data.responseMessage.length === 0) {
+                            alert('Ошибка на сервере, в ответ получен null!')
+                        } else {
+                            alert(data.responseMessage);
+                        }
+                    },
+                    error: {
+                        alert(message) {
+                            message = "Request Error!"
+                        }
+                    }
+
+                });
+                return false;
+            }
+        }
+    }*/
+
+    /*----------------------------------------------REQUEST TO ADD NEW LANGUAGE-------------------------------------------------*/
+/*
+    $('#addNewLanguageInToDictionary').click(doAjaxRequestToAddNewLanguage)
+
+    function doAjaxRequestToAddNewLanguage() {
+        var newLanguageCode = $('#inputedNewLanguageCode').val();
+        var newLanguageName = $('#inputedNewLanguageName').val();
+
+        if (newLanguageCode.length === 0) {
+            alert("Введите код языка для добавления!")
+            return false;
+        } else {
+            if (newLanguageName.length === 0) {
+                alert("Введите имя языка для добавления!")
+                return false;
+            } else {
+
+                $.ajax({
+                    url: 'http://localhost:8080/addToDictionary/addNewLanguage',
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        languageCode: newLanguageCode,
+                        languageName: newLanguageName,
+                    }),
+                    error: {
+                        alert(message) {
+                            message = "Request Error!"
+                        }
+                    },
+                    success: function (data) {
+
+                        if (data.infoMessageAboutAddNewLanguageResult.length === 0) {
+                            alert('Ошибка на сервере, в ответ получен null!')
+                        } else {
+                            alert(data.infoMessageAboutAddNewLanguageResult);
+                        }
+
+                        $.ajax({
+                            url: 'http://localhost:8080/serchRequest/getAllRowsFromLanguages',
+                            type: 'GET',
+
+                            success: function (data) {
+                                if(data.languageCode.length === 0){
+                                    alert("Нет списка кодов языков");
+                                }else {
+                                    if(data.languageName.length === 0){
+                                        alert("Нет списка имён языков");
+                                    }else {
+                                        /!****!/
+
+
+                                        function createNewRows(){
+                                        let i = 0;
+                                        let count1 = 1;
+                                        let count2 = 2;
+                                        var languageCode = data.languageCode[i];
+                                        var languageName = data.languageName[i];
+    /!*Попробовать создавть объекты строк с попощью jquery $(tr) *!/
+                                            /!**!/
+                                        markup = "<tr>" + //markup = "<tr id = "+count1+">" + Для строки нужно генерить id а всем остальным элементам в ней задать классы, чтобы потом через query брабатывать их
+                                            "<td>" + languageCode + "</td>" + //"<td><p id = >" + languageCode + "</p></td>" +  id для всех элеменотв формируется из имении параметра который содержит блок и id языка - <td id = languageCodetext+idЯзыка>languageCode</td> где languageCode = eng и id = 2  у ENGLISH
+                                            "<td>" + languageName + "</td>" +
+                                            /!*Сделать все 4 кнопки в одной ячейке td*!/
+                                            "<td>" + "<button id = " + count1 + " type=click>Редактировать</button>" + "</td>" + //(count++)
+                                            "<td>" + "<button id = " + count2 + " type=click>Удалить</button>" + "</td>" +
+                                            "</tr>";
+                                        count1++;
+                                        count2++;
+                                        i++
+                                        tableBody = $("table tbody");
+                                        tableBody.append(markup);
+                                    }
+                                        data.languageCode.forEach(createNewRows())
+                                    }
+                                }
+
+                            }
+                            /!*{
+                                if (data.langCode.length === 0) {
+                                    alert('Слово не найдено!!!')
+                                } else {
+                                    $("#translation").text(data.translationText[0]);//нужно объект ответа преобразовать из массива строк  через \n
+
+                                    var tr = document.createElement("tr"), td;
+                                    for (let i = 0; i < 3; i++) {
+                                        td = document.createElement("td");
+                                        td.innerHTML = this.elements[i].value;
+                                        tr.appendChild(td);
+                                    }
+                                    table.appendChild(tr);
+                                }
+                            }*!/
+                        }); return false;
+                    }
+
+                });
+                return false;
+            }
+        }
+    }*/
+   /* function doAjaxRequestToGetallDataAboutLanguages(){
+        $.ajax({
+            url: 'http://localhost:8080/serchRequestFromMainForm/addNewLanguage',
+            type: 'GET'
+        })
+    }*/
 });

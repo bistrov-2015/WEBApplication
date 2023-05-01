@@ -13,33 +13,32 @@
     <li><a href="home.html">Главная</a></li>
 </div>
 
-<form id="mainSearchForm">
+<!------------------------------------------------ADD NEW WORD IN TO DICTIONARY -------------------------------------------->
 
-    <select id="select1Form" name="select1">
-        <option id="option1InSelect1Form"
+
+<form id="addNewWordForm">
+
+    <select id="select1AddNewWord" name="select1AddNewWord">
+        <option id="option1InSelect1AddNewWord"
                 th:each="type : ${Languages}"
                 th:value="${type.getLanguageCode()}"
                 th:text="${type.getLanguageName()}">
         </option>
     </select>
 
-    <select id="select2Form">
-        <option id="option2InSelect1Form"
+    <select id="select2AddNewWord">
+        <option id="option2InSelect2AddNewWord"
                 th:each="type : ${Languages}"
                 th:value="${type.getLanguageCode()}"
                 th:text="${type.getLanguageName()}">
         </option>
     </select>
 
-    <input id="inputedWordInSearch" type="text" placeholder="Перевести слово">
-
-    <button id="findTranslationBtn" type="submit">Перевести</button>
+    <input id="inputedNewWordToAdded" type="text" placeholder="Новое слово">
+    <input id="inputedTranslationForNewWord" type="text" placeholder="Введите перевод">
+    <button id="addNewWordBtn" type="submit">Добавить</button>
 
 </form>
-
-<div id="TranslationDiv">
-    <p id="translation"></p>
-</div>
 
 </body>
 </html>

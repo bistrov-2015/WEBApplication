@@ -22,6 +22,8 @@ public interface WordRepository extends JpaRepository<Word, Long> {
 
     @Query("select w.value from Word w where w.wordId  in :word2Id and w.languageCodeReference.languageCode = :languageCode")
     List<String> findWord2ValueByWord2IdAndLanguageCode(List<Long> word2Id, String languageCode);
+    /**Есть мысль что второй параметр д.быть не строкой а объектом language*/
+    //Iterable<Word>findAllByValueAnAndLanguageCodeReference(String word, String languageCode);
 
 
 }

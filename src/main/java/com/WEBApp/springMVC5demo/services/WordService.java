@@ -12,4 +12,8 @@ public class WordService {
         this.wordsRepository = wordsRepository;
     }
     public void save(Word word){wordsRepository.save(word);}
+
+/*    public boolean checkMatchesWithExistingRecordsInDatabase(String word){
+        if
+    }*/
 }
