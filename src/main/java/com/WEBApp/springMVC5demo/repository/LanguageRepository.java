@@ -3,10 +3,10 @@ package com.WEBApp.springMVC5demo.repository;
 import com.WEBApp.springMVC5demo.Entity.Languages;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 @Component
 public interface LanguageRepository extends CrudRepository<Languages,Long> {
@@ -28,6 +28,17 @@ public interface LanguageRepository extends CrudRepository<Languages,Long> {
 
     @Query("select l.languageName from Languages l where l.languageName =:languageName")
     String checkLanguageNameMatches(String languageName);
+/*
+    @Query("delete from Languages l where l.languageId =:languageId")
+    Boolean deleteRowByLanguageId(@Param("languageId") Long languageId);*/
+
+    Iterable<Languages>deleteByLanguageId(long languageId);
+
+    @Query("select l.languageName from Languages l where l.languageId =:languageId")
+    String findLanguageNameByLanguageId(@Param("languageId") Long languageId);
+
+    Iterable<Languages>findByLanguageId(long languageId);
+
 
 
 }

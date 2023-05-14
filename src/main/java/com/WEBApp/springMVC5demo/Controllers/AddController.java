@@ -20,9 +20,13 @@ public class AddController {
 
     private MessegesForUser messegesForUser;
 
-    /*public AddController(MessegesForUser messegesForUser) {
+    public void setMessegesForUser(MessegesForUser messegesForUser) {
         this.messegesForUser = messegesForUser;
-    }*/
+    }
+
+    public AddController(LanguagesService languagesService) {
+                this.languagesService = languagesService;
+    }
 
 
     @RequestMapping(value = "/addNewLanguage", method = RequestMethod.POST)
@@ -42,6 +46,8 @@ public class AddController {
          *Нужен boolean метод, который определяет есть ли совпадения в БД и по коду и имени языка
          *  **/
     }
+
+
 
     /*@RequestMapping(value = "/addNewWord", method = RequestMethod.POST)
     @ResponseBody

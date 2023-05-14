@@ -4,7 +4,9 @@
     font-family: sans-serif;
 }
 body{
-    background: url("https://www.pnp.ru/upload/entities/2021/11/01/14/article/detailPicture/84/c7/ff/12/f6f484273f5ba04f5e5fba48e2121f64.jpg");
+    /*background: url("https://www.pnp.ru/upload/entities/2021/11/01/14/article/detailPicture/84/c7/ff/12/f6f484273f5ba04f5e5fba48e2121f64.jpg");*/
+    background: url("https://avatars.dzeninfra.ru/get-zen_doc/1652143/pub_601d0433d496d267135424cc_601d0b8bd496d26713635cb5/scale_1200");
+
     display: flex;
     height: 100vh;
     background-repeat: no-repeat;

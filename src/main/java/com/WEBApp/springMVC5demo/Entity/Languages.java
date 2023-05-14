@@ -56,5 +56,9 @@ Languages {
         this.languageName = languageName;
     }
 
-
+    public Languages(Long languageId, String languageCode, String languageName) {
+        this.languageId = languageId;
+        this.languageCode = languageCode;
+        this.languageName = languageName;
+    }
 }
